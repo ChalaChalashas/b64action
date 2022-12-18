@@ -62,6 +62,17 @@ const untildify = __webpack_require__(385);
 async function run() {
   try { 
     const filePath = untildify(core.getInput('filePath'));
+    core.info("-----------------------------------------------------------------------------------------------------");  
+    core.info("path");
+    core.info(filePath);
+    let np = path.normalize(filePath);
+    core.info("np");
+    core.info(np);
+    let f = fs.readFileSync(np);
+    let b64 = bota(f);
+    core.info("b64");
+    core.info(b64);
+    core.info("-----------------------------------------------------------------------------------------------------");  
     let promise = new Promise(function(resolve, reject) {
       base64.encode(path.normalize(filePath), function(err, base64String) {
         if(err){
