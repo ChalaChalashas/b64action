@@ -5,7 +5,7 @@ on:
     branches:
       - master
       - 'releases/*'
-    workflow_dispatch:
+  workflow_dispatch:
 
 jobs:
   checks:
