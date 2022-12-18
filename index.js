@@ -2,7 +2,7 @@ const core = require('@actions/core');
 const base64 = require('file-base64');
 const path = require('path');
 const untildify = require('untildify');
-const fs = require('fs');
+const fs = require('fs'); 
  
 // most @actions toolkit packages have async methods
 async function run() {
