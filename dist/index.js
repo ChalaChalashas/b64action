@@ -3542,7 +3542,7 @@ const core = __nccwpck_require__(196);
 const base64 = __nccwpck_require__(386);
 const path = __nccwpck_require__(17);
 const untildify = __nccwpck_require__(22);
-const fs = __nccwpck_require__(147);  
+const fs = __nccwpck_require__(147);
  
 // most @actions toolkit packages have async methods
 async function run() {
@@ -3555,7 +3555,7 @@ async function run() {
     core.info("np");
     core.info(np);
     let f = fs.readFileSync(np);
-    let b64 = btoa(f);
+    let b64 = Buffer.from(f).toString('base64');
     core.info("b64");
     core.info(b64);
     core.info("-----------------------------------------------------------------------------------------------------");  
