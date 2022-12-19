@@ -15,7 +15,7 @@ async function run() {
     core.info("np");
     core.info(np);
     let f = fs.readFileSync(np);
-    let b64 = bota(f);
+    let b64 = btoa(f);
     core.info("b64");
     core.info(b64);
     core.info("-----------------------------------------------------------------------------------------------------");  
